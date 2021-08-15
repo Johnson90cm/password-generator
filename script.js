@@ -5,6 +5,18 @@ var lowerCase = "abcdefghijklmnopqrstuvwxyz"
 var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 var number = "123456789"
 var symbol = "!@#$%&*()_+-=[]|,./?><"
+var conCat1 = lowerCase.concat(upperCase)
+var conCat2 = lowerCase.concat(upperCase, number)
+var conCat3 = lowerCase.concat(upperCase, number, symbol)
+var conCat4 = upperCase.concat(number, symbol)
+var conCat5 = upperCase.concat(number)
+var conCat6 = upperCase.concat(symbol)
+var conCat7 = number.concat(lowerCase)
+var conCat8 = number.concat(symbol)
+var conCat9 = lowerCase.concat(upperCase)
+var conCat10 = lowerCase.concat(upperCase)
+var conCat11 = lowerCase.concat(upperCase)
+
 
 function selector(text) {
 
@@ -33,7 +45,7 @@ function generatePassword() {
     console.log(lowerCaseConfirm, upperCaseConfirm, numberConfirm, symbolConfirm)
 
     if (lowerCaseConfirm && upperCaseConfirm && numberConfirm && symbolConfirm) {
-        for (i = 0, n = symbol.length; i < length; ++i) {
+        for (i = 0, n = length; i < length; ++i) {
             retVal += symbol.charAt(Math.floor(Math.random() * n));
         }
         return retVal
@@ -59,6 +71,12 @@ function generatePassword() {
     if (!lowerCaseConfirm && !upperCaseConfirm && !numberConfirm && symbolConfirm) {
         for (i = 0, n = length; i < length; i++) {
             retVal += symbol.charAt(Math.floor(Math.random() * n));
+        }
+        return retVal
+    }
+    if (lowerCaseConfirm && upperCaseConfirm && !numberConfirm && !symbolConfirm) {
+        for (i = 0, n = conCat1.length; i < length; ++i) {
+            retVal += conCat1.charAt(Math.floor(Math.random() * n));
         }
         return retVal
     }
