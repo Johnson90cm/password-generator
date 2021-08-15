@@ -23,3 +23,45 @@ WHEN all prompts are answered
 THEN a password is generated that matches the selected criteria
 WHEN the password is generated
 THEN the password is either displayed in an alert or written to the page
+
+
+
+var length = parseInt(window.prompt(text, ""));
+    checkNumber(length);
+    password = randomFunc
+
+    function checkNumber(length) {
+    if (length <= 128 && length >= 8) {
+
+    } else if (isNaN(length)) {
+        generatePassword("Please enter a length from 8 to 128", "");
+    } else {
+        generatePassword("Your length (" + length + ") is not between 8 and 128", "");
+    }
+
+}
+
+
+
+        var getLowercase = window.confirm("Would you like to include Lowercase?")
+        if (getLowercase) {
+            var getUpperCase = window.confirm("Would you like to include Uppercase?")
+            if (getUpperCase) {
+                var getNumber = window.confirm("Would you like to include Numbers?")
+                if (getNumber) {
+                    var getSymbol = window.confirm("Would you like to include Symbols?")
+                    if (getSymbol) {
+                        getLength()
+                        }
+                    }
+                }
+            }
+        }
+
+
+        var randomFunc = {
+    lower: getRandomLower,
+    upper: getRandomUpper,
+    number: getRandomNumber,
+    symbol: getRandomSymbol,
+}
