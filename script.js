@@ -6,10 +6,10 @@ var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 var number = "123456789"
 var symbol = "!@#$%&*()_+-=[]|,./?><"
 
-function selector (text) {
+function selector(text) {
 
     var text = parseInt(window.prompt(text, "Choose a # between 8-128"));
-    
+
     if (text <= 128 && text >= 8) {
 
         length = text
@@ -24,7 +24,7 @@ function selector (text) {
 }
 
 function generatePassword() {
-
+    var retVal = ""
     var confirmArr = [lowerCaseConfirm, upperCaseConfirm, numberConfirm, symbolConfirm]
     var lowerCaseConfirm = window.confirm("Would you like to include Lowercase?")
     var upperCaseConfirm = window.confirm("Would you like to include Uppercase?")
@@ -32,10 +32,38 @@ function generatePassword() {
     var symbolConfirm = window.confirm("Would you like to include Symbols?")
     console.log(lowerCaseConfirm, upperCaseConfirm, numberConfirm, symbolConfirm)
 
-    for (i = 0; i < confirmArr.length; i++) {
-        if (lowerCaseConfirm || upperCaseConfirm || numberConfirm || symbolConfirm)
-        window.alert('Welcome to PW Generator! you selected ' + (i));
+    if (lowerCaseConfirm && upperCaseConfirm && numberConfirm && symbolConfirm) {
+        for (i = 0, n = symbol.length; i < length; ++i) {
+            retVal += symbol.charAt(Math.floor(Math.random() * n));
+        }
+        return retVal
     }
+    if (lowerCaseConfirm && !upperCaseConfirm && !numberConfirm && !symbolConfirm) {
+        for (i = 0, n = length; i < length; i++) {
+            retVal += lowerCase.charAt(Math.floor(Math.random() * n));
+        }
+        return retVal
+    }
+    if (!lowerCaseConfirm && upperCaseConfirm && !numberConfirm && !symbolConfirm) {
+        for (i = 0, n = length; i < length; i++) {
+            retVal += upperCase.charAt(Math.floor(Math.random() * n));
+        }
+        return retVal
+    }
+    if (!lowerCaseConfirm && !upperCaseConfirm && numberConfirm && !symbolConfirm) {
+        for (i = 0, n = length; i < length; i++) {
+            retVal += number.charAt(Math.floor(Math.random() * n));
+        }
+        return retVal
+    }
+    if (!lowerCaseConfirm && !upperCaseConfirm && !numberConfirm && symbolConfirm) {
+        for (i = 0, n = length; i < length; i++) {
+            retVal += symbol.charAt(Math.floor(Math.random() * n));
+        }
+        return retVal
+    }
+    else (!lowerCaseConfirm && !upperCaseConfirm && !numberConfirm && !symbolConfirm)
+        return "Please select at least one option"
 }
 
 
