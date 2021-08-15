@@ -70,6 +70,8 @@ var length = parseInt(window.prompt(text, ""));
             console.log(lowerCase)
         }
 
+            var confirmArr = [lowerCaseConfirm, upperCaseConfirm, numberConfirm, symbolConfirm]
+
             if(lowerCaseConfirm === true && upperCaseConfirm === true && numberConfirm === true && symbolConfirm === true) {
                 console.log(length)
                 console.log(lowerCaseConfirm, upperCaseConfirm, numberConfirm, symbolConfirm)
