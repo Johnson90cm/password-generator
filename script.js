@@ -6,41 +6,42 @@ var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 var number = "123456789"
 var symbol = "!@#$%&*()_+-=[]|,./?><"
 
-
-function generatePassword(text) {
+function selector (text) {
 
     var text = parseInt(window.prompt(text, "Choose a # between 8-128"));
     
     if (text <= 128 && text >= 8) {
+
         length = text
-        console.log(length)
-        alert("good choice")
 
     } else if (isNaN(text)) {
         alert("Please enter a length from 8 to 128", "");
-        return generatePassword()
+        return selector()
     } else {
         alert("Your length (" + text + ") is not between 8 and 128", "");
-        return generatePassword()
+        return selector()
     }
 }
 
-function getRandomLower() {
-    return String.fromCharCode(Math.floor(Math.random() * 26) + 97)
+function generatePassword() {
+
+    var confirmArr = [lowerCaseConfirm, upperCaseConfirm, numberConfirm, symbolConfirm]
+    var lowerCaseConfirm = window.confirm("Would you like to include Lowercase?")
+    var upperCaseConfirm = window.confirm("Would you like to include Uppercase?")
+    var numberConfirm = window.confirm("Would you like to include Numbers?")
+    var symbolConfirm = window.confirm("Would you like to include Symbols?")
+    console.log(lowerCaseConfirm, upperCaseConfirm, numberConfirm, symbolConfirm)
+
+    for (i = 0; i < confirmArr.length; i++) {
+        if (lowerCaseConfirm || upperCaseConfirm || numberConfirm || symbolConfirm)
+        window.alert('Welcome to PW Generator! you selected ' + (i));
+    }
 }
 
-function getRandomUpper() {
-    return String.fromCharCode(Math.floor(Math.random() * 26) + 65)
-}
 
-function getRandomNumber() {
-    return String.fromCharCode(Math.floor(Math.random() * 10) + 48)
-}
 
-function getRandomSymbol() {
-    var symbols = '!@#$%&*()_+-=[]|,./?><'
-    return symbols[Math.floor(Math.random() * symbols.length)]
-}
+
+
 
 /////
 
@@ -49,6 +50,7 @@ var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
+    selector()
     var password = generatePassword();
     var passwordText = document.querySelector("#password");
 

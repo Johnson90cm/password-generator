@@ -65,3 +65,100 @@ var length = parseInt(window.prompt(text, ""));
     number: getRandomNumber,
     symbol: getRandomSymbol,
 }
+
+        for (i = 0; i < length.length; i++) {
+            console.log(lowerCase)
+        }
+
+            if(lowerCaseConfirm === true && upperCaseConfirm === true && numberConfirm === true && symbolConfirm === true) {
+                console.log(length)
+                console.log(lowerCaseConfirm, upperCaseConfirm, numberConfirm, symbolConfirm)
+            }
+
+
+                    if(lowerCaseConfirm === true && upperCaseConfirm === true && numberConfirm === true && symbolConfirm === false) {
+                console.log(length)
+                console.log(lowerCaseConfirm, upperCaseConfirm, numberConfirm, symbolConfirm)
+            }
+
+            if(lowerCaseConfirm === true && upperCaseConfirm === true && numberConfirm === false && symbolConfirm === false) {
+                console.log(length)
+                console.log(lowerCaseConfirm, upperCaseConfirm, numberConfirm, symbolConfirm)
+            }
+
+            if(lowerCaseConfirm === true && upperCaseConfirm === false && numberConfirm === false && symbolConfirm === false) {
+                console.log(length)
+                console.log(lowerCaseConfirm, upperCaseConfirm, numberConfirm, symbolConfirm)
+            }
+
+            if(lowerCaseConfirm === false && upperCaseConfirm === false && numberConfirm === false && symbolConfirm === false) {
+                console.log(length)
+                console.log(lowerCaseConfirm, upperCaseConfirm, numberConfirm, symbolConfirm)
+            }
+
+            if(lowerCaseConfirm === false && upperCaseConfirm === true && numberConfirm === true && symbolConfirm === true) {
+                console.log(length)
+                console.log(lowerCaseConfirm, upperCaseConfirm, numberConfirm, symbolConfirm)
+            }
+
+            if(lowerCaseConfirm === false && upperCaseConfirm === false && numberConfirm === true && symbolConfirm === true) {
+                console.log(length)
+                console.log(lowerCaseConfirm, upperCaseConfirm, numberConfirm, symbolConfirm)
+            }
+
+            if(lowerCaseConfirm === false && upperCaseConfirm === false && numberConfirm === false && symbolConfirm === true) {
+                console.log(length)
+                console.log(lowerCaseConfirm, upperCaseConfirm, numberConfirm, symbolConfirm)
+            }
+
+            if(lowerCaseConfirm === true && upperCaseConfirm === false && numberConfirm === true && symbolConfirm === false) {
+                console.log(length)
+                console.log(lowerCaseConfirm, upperCaseConfirm, numberConfirm, symbolConfirm)
+            }
+
+            if(lowerCaseConfirm === false && upperCaseConfirm === true && numberConfirm === false && symbolConfirm === true) {
+                console.log(length)
+                console.log(lowerCaseConfirm, upperCaseConfirm, numberConfirm, symbolConfirm)
+            }
+
+            if(lowerCaseConfirm === true && upperCaseConfirm === false && numberConfirm === true && symbolConfirm === true) {
+                console.log(length)
+                console.log(lowerCaseConfirm, upperCaseConfirm, numberConfirm, symbolConfirm)
+            }
+
+            if(lowerCaseConfirm === true && upperCaseConfirm === false && numberConfirm === true && symbolConfirm === false) {
+                console.log(length)
+                console.log(lowerCaseConfirm, upperCaseConfirm, numberConfirm, symbolConfirm)
+            }
+
+            if(lowerCaseConfirm === true && upperCaseConfirm === false && numberConfirm === false && symbolConfirm === false) {
+                console.log(length)
+                console.log(lowerCaseConfirm, upperCaseConfirm, numberConfirm, symbolConfirm)
+            }
+
+            if(lowerCaseConfirm === true && upperCaseConfirm === false && numberConfirm === false && symbolConfirm === false) {
+                console.log(length)
+                console.log(lowerCaseConfirm, upperCaseConfirm, numberConfirm, symbolConfirm)
+            }
+
+            if(lowerCaseConfirm === true && upperCaseConfirm === false && numberConfirm === false && symbolConfirm === false) {
+                console.log(length)
+                console.log(lowerCaseConfirm, upperCaseConfirm, numberConfirm, symbolConfirm)
+            }
+
+            function getRandomLower() {
+    return String.fromCharCode(Math.floor(Math.random() * 26) + 97)
+}
+
+function getRandomUpper() {
+    return String.fromCharCode(Math.floor(Math.random() * 26) + 65)
+}
+
+function getRandomNumber() {
+    return String.fromCharCode(Math.floor(Math.random() * 10) + 48)
+}
+
+function getRandomSymbol() {
+    var symbols = '!@#$%&*()_+-=[]|,./?><'
+    return symbols[Math.floor(Math.random() * symbols.length)]
+}
