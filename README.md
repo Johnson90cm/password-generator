@@ -12,7 +12,7 @@ I used a few of the following methods to get it functioning.
 
 
 Screenshot: 
-![](./image.png)
+![](image.png)
 
 Working Url: https://johnson90cm.github.io/password-generator/
 
