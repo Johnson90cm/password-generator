@@ -4,7 +4,7 @@ var lowerCase = "abcdefghijklmnopqrstuvwxyz"
 // 0100
 var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 // 0010
-var number = "123456789"
+var number = "1234567890"
 // 0001
 var symbol = "!@#$%&*()_+-=[]|,./?><"
 // 0011
