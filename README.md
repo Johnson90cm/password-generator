@@ -1,4 +1,23 @@
-# password-generator
+# Password Generator Challenge Wk 3
+
+Description: 
+
+In this assignment I was tasked with creating the script.js for a password generation web application.
+
+I used a few of the following methods to get it functioning.
+
+1. Created variables to hold data required to write the password.
+2. Concatenated multiple variables to create mixed arrays based on the users desired inputs.
+3. Created multiple functions: 1 to prompt the user and define length of the password desired, another to run multiple "if" statements depending on the users selections and return desired password criteria
+
+
+Screenshot: 
+![](.image)
+
+Working Url: https://johnson90cm.github.io/password-generator/
+
+
+# User Story and Acceptance Criteria
 
 User Story 
 
